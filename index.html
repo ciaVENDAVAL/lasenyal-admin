@@ -47,12 +47,12 @@
         <li>Contact, footer, main photos, colours</li>
       </ul>
     </a>
-    <a class="card" href="documents/">
+    <a class="card" href="web/#/collections/_singletons/entries/downloads">
       <h2>PDFs</h2>
-      <p>Press kit and other documents</p>
+      <p>Press kit (CA · ES · EN)</p>
       <ul>
-        <li>Replace a PDF: upload a file with the <b>same name</b> and choose <i>Replace</i>. All links keep working.</li>
-        <li>Add new PDFs</li>
+        <li>Emails link to <b>lasenyal.com/dossier/ca/</b> (or /es/, /en/). It always gives the PDF chosen here.</li>
+        <li>New version: upload it and choose it, or upload one with the <b>same name</b> and choose <i>Replace</i>.</li>
       </ul>
     </a>
   </div>
@@ -65,9 +65,9 @@
       <li>Open <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">New fine-grained token</a>.</li>
       <li><b>Token name:</b> <code>La Senyal admin</code>. <b>Expiration:</b> up to one year.</li>
       <li><b>Resource owner:</b> <code>ciaVENDAVAL</code>.</li>
-      <li><b>Repository access:</b> <i>Only select repositories</i> → <code>lasenyal-web</code> and <code>lasenyal-docs</code>.</li>
+      <li><b>Repository access:</b> <i>Only select repositories</i> → <code>lasenyal-web</code>.</li>
       <li><b>Permissions → Repository permissions → Contents:</b> <i>Read and write</i>.</li>
-      <li><b>Generate token</b>, copy it, open <i>Website</i> or <i>PDFs</i> above, choose <b>Sign In Using Access Token</b> and paste it. One token works for both.</li>
+      <li><b>Generate token</b>, copy it, open <i>Website</i> above, choose <b>Sign In Using Access Token</b> and paste it.</li>
     </ol>
     <p>If ciaVENDAVAL doesn't allow fine-grained tokens, use a <a href="https://github.com/settings/tokens/new?scopes=public_repo&amp;description=La%20Senyal%20admin" target="_blank" rel="noopener">classic token</a> with only <code>public_repo</code> ticked.</p>
     <p>Keep the token private, like a password. If it leaks, delete it on GitHub (Settings → Developer settings) and make a new one.</p>
@@ -78,9 +78,10 @@
     <ul>
       <li>Each <b>Save</b> goes straight to the live site. It shows up after about <b>1–2 minutes</b> (reload the page).</li>
       <li>Every change is kept in GitHub's history, so anything can be undone.</li>
-      <li><b>Photos:</b> upload them as they are. Huge phone photos are shrunk, the small version for the photo strip is made automatically, and member photos are cropped square. This takes a minute more.</li>
+      <li><b>Photos:</b> upload them as they are (simple file names without spaces or accents, e.g. <code>concert-ocana-2026.jpg</code>). The original is kept untouched in <code>source-images/</code>; huge phone photos are shrunk, the small version for the photo strip is made automatically, and member photos are cropped square. This takes a minute more.</li>
       <li><b>Replace a photo</b> without changing any text: <i>Assets</i> (picture icon, top left) → choose the photo → ⋮ → <i>Replace</i>, or upload one with the same name.</li>
       <li><b>New page:</b> <i>Pages</i> → <i>New</i>, fill in the three languages, save. Then add it in <i>Menu</i> to link it.</li>
+      <li>Credit the photographer of every photo (tell Claude or add it to <code>source-images/README.md</code>).</li>
       <li>On a phone it works too: the menu is behind ☰.</li>
     </ul>
   </details>

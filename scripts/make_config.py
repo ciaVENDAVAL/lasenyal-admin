@@ -104,16 +104,24 @@ cfg = {
  "site_url": SITE + "/",
  "media_folder": "assets/img/lg",
  "public_folder": "/assets/img/lg",
- "media_libraries": {"default": {"config": {"slugify_filename": True, "max_file_size": 15000000}}},
+ "media_libraries": {"default": {"config": {"slugify_filename": False, "max_file_size": 25000000}}},
  "slug": {"encoding": "ascii", "clean_accents": True},
  "editor": {"preview": False},
  "output": {"yaml": {"quote": "double"}, "omit_empty_optional_fields": True},
  "i18n": {"structure": "multiple_folders", "locales": ["ca", "es", "en"], "default_locale": "ca"},
  "asset_collections": [
+   {"name": "pdfs", "label": "PDFs", "media_folder": "pdf", "public_folder": "/pdf", "icon": "picture_as_pdf"},
    {"name": "photos", "label": "Photos (full size)", "media_folder": "assets/img/lg", "public_folder": "/assets/img/lg", "icon": "photo_library"},
    {"name": "member_photos", "label": "Member photos", "media_folder": "assets/img/members", "public_folder": "/assets/img/members", "icon": "account_circle"},
  ],
  "singletons": [
+   {"name": "downloads", "label": "PDFs: which one the links give", "icon": "picture_as_pdf", "file": "_data/downloads.yml", "fields": [
+     {"name": "presskit", "label": "Press kit", "widget": "object",
+      "hint": "Short links for emails: lasenyal.com/dossier/ca/ · /es/ · /en/ — they always give the PDF chosen here. To publish a new version: upload it here (name it LaSenyal_CA_presskit_2026-12.pdf) and choose it, or upload one with exactly the same name as the old one and choose Replace.",
+      "fields": [
+        {"name": "ca", "label": "Català", "widget": "file", "media_folder": "/pdf", "public_folder": "/pdf"},
+        {"name": "es", "label": "Castellano", "widget": "file", "media_folder": "/pdf", "public_folder": "/pdf"},
+        {"name": "en", "label": "English", "widget": "file", "media_folder": "/pdf", "public_folder": "/pdf"}]}]},
    {"name": "site", "label": "Site settings: contact, footer, main photos", "icon": "tune", "file": "_data/site.yml", "fields": [
      {"name": "contact", "label": "Contact", "widget": "object", "fields": [
         {"name": "email", "label": "Email", "widget": "string"},
