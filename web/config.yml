@@ -173,6 +173,7 @@ singletons:
           value: hands
         - label: Contact (jumps to the footer)
           value: contact
+        dropdown_threshold: 12
     - name: page
       label: Page from 'Pages'
       widget: object
@@ -231,6 +232,7 @@ singletons:
     - Space Grotesk
     - IBM Plex Sans
     hint: Titles keep the wide ARCHIVO font. The accessibility button's 'easier font' still works.
+    dropdown_threshold: 12
 collections:
 - name: texts
   label: Texts (CA · ES · EN)
@@ -982,6 +984,7 @@ collections:
         - label: Trompeta
           value: trumpet
         hint: The role names are in Texts → Member roles.
+        dropdown_threshold: 12
       - name: photo
         label: Photo
         widget: image
@@ -1026,6 +1029,7 @@ collections:
           value: l
         - label: Portrait (tall)
           value: p
+        dropdown_threshold: 12
       - name: alt
         label: Description for blind visitors (optional)
         widget: string

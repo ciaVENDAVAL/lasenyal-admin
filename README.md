@@ -7,6 +7,7 @@ Admin for **La Senyal**: edit the website and swap PDFs from the browser. No cod
 | Page | Edits | What |
 |---|---|---|
 | `/` | — | Start page and sign-in help |
+| lasenyal-web `…/#edit` | `lasenyal-web` | **Edit on the page**: tap texts, photos, PDF links on the real site; Publish = one commit (code: lasenyal-web `assets/js/edit.js`) |
 | `/web/` | `lasenyal-web` | Texts (CA·ES·EN), concerts, members, photo strip, extra pages, menu, contact/footer, main photos, colours and font, **PDFs** (`pdf/` + `_data/downloads.yml` → short links `/dossier/<lang>/`) |
 
 [Sveltia CMS](https://sveltiacms.app) (free, open source, loaded from a CDN). Every save is a commit on `main` of
@@ -17,6 +18,9 @@ lasenyal-docs is the private office repo and is **not** edited here.
 GitHub token: fine-grained, owner `ciaVENDAVAL`, repo `lasenyal-web`, *Contents: read and write* (steps on the start page).
 For a "Sign in with GitHub" button instead, deploy [sveltia-cms-auth](https://github.com/sveltia/sveltia-cms-auth)
 (free Cloudflare Worker) and add `base_url:` to `web/config.yml`.
+
+## Phones
+Select lists are shown as radio buttons (`dropdown_threshold`), because the searchable dropdown opened and closed the keyboard on phones.
 
 ## Files
 - `web/config.yml` — **generated**: edit `scripts/make_config.py`, then
