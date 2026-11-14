@@ -1,0 +1,43 @@
+# Sveltia CMS config for lasenyal-docs (the PDFs). Docs: https://sveltiacms.app/en/docs
+app_title: "La Senyal · PDFs"
+logo:
+  src: /lasenyal-admin/logo.png
+backend:
+  name: github
+  repo: ciaVENDAVAL/lasenyal-docs
+  branch: main
+  auth_methods: [token]
+  commit_messages:
+    uploadMedia: "Admin: upload “{{path}}”"
+    deleteMedia: "Admin: delete “{{path}}”"
+    update: "Admin: update {{collection}} “{{slug}}”"
+site_url: https://ciavendaval.github.io/lasenyal-docs/
+media_folder: pdf
+public_folder: /lasenyal-docs/pdf
+media_libraries:
+  default:
+    config:
+      slugify_filename: true
+      max_file_size: 25000000
+output:
+  yaml:
+    quote: double
+  omit_empty_optional_fields: true
+editor:
+  preview: false
+singletons:
+  - name: list
+    label: "Names on the documents page"
+    icon: list
+    file: _data/pdfs.yml
+    fields:
+      - name: pdfs
+        label: PDFs with a friendly name
+        widget: list
+        root: true
+        label_singular: PDF
+        summary: "{{fields.title}}"
+        hint: "Optional. Every PDF is listed on the documents page anyway; these show a nicer name and come first."
+        fields:
+          - { name: file, label: PDF, widget: file, media_folder: /pdf, public_folder: /lasenyal-docs/pdf }
+          - { name: title, label: Name to show, widget: string }

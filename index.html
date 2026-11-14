@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>La Senyal · admin</title>
+  <link rel="icon" href="favicon.png">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@125,900&family=Fragment+Mono&family=Questrial&display=swap">
+  <style>
+    :root { --bg:#0c0404; --card:#171211; --ink:#fff; --text:rgb(240 237 235/.82); --muted:rgb(240 237 235/.55); --line:rgb(240 237 235/.14); --pink:#e675b5; }
+    * { box-sizing: border-box; }
+    body { margin:0; background:var(--bg); color:var(--text); font:400 1.05rem/1.55 "Questrial",system-ui,sans-serif; padding:clamp(1.25rem,5vw,4rem); }
+    main { max-width:56rem; margin:0 auto; }
+    .label { font:.78rem "Fragment Mono",monospace; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); margin:0 0 .8rem; }
+    h1 { font:900 clamp(2.4rem,9vw,5rem)/.92 "Archivo",sans-serif; font-stretch:125%; text-transform:uppercase; letter-spacing:-.02em; color:var(--ink); margin:0 0 2.5rem; display:flex; align-items:center; gap:1rem; }
+    h1 img { width:clamp(48px,9vw,84px); height:auto; }
+    h2 { color:var(--ink); font-weight:400; font-size:1.35rem; margin:0 0 .4rem; }
+    .cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(15rem,1fr)); gap:1rem; margin-bottom:3rem; }
+    .card { display:block; background:var(--card); border:1px solid var(--line); border-radius:14px; padding:1.5rem; text-decoration:none; color:var(--text); transition:border-color .15s, transform .15s; }
+    .card:hover, .card:focus-visible { border-color:var(--pink); transform:translateY(-2px); }
+    .card h2::after { content:" →"; color:var(--pink); }
+    .card ul { margin:.8rem 0 0; padding-left:1.1rem; color:var(--muted); font-size:.95rem; }
+    a { color:var(--pink); }
+    details { border-top:1px solid var(--line); padding:1rem 0; }
+    details:last-of-type { border-bottom:1px solid var(--line); }
+    summary { cursor:pointer; color:var(--ink); font-size:1.1rem; }
+    details ol, details ul { padding-left:1.3rem; }
+    details li { margin:.35rem 0; }
+    code, kbd { font:.85em "Fragment Mono",monospace; background:var(--card); padding:.1em .35em; border-radius:4px; color:var(--ink); }
+    .foot { margin-top:3rem; font:.75rem "Fragment Mono",monospace; color:var(--muted); }
+  </style>
+</head>
+<body>
+<main>
+  <p class="label">/ La Senyal /</p>
+  <h1><img src="logo.png" alt="">Admin</h1>
+
+  <div class="cards">
+    <a class="card" href="web/">
+      <h2>Website</h2>
+      <p>lasenyal.com</p>
+      <ul>
+        <li>Texts in CA · ES · EN</li>
+        <li>Concerts, members, photo strip</li>
+        <li>Extra pages and the menu</li>
+        <li>Contact, footer, main photos, colours</li>
+      </ul>
+    </a>
+    <a class="card" href="documents/">
+      <h2>PDFs</h2>
+      <p>Press kit and other documents</p>
+      <ul>
+        <li>Replace a PDF: upload a file with the <b>same name</b> and choose <i>Replace</i>. All links keep working.</li>
+        <li>Add new PDFs</li>
+      </ul>
+    </a>
+  </div>
+
+  <details>
+    <summary>First time: how to sign in</summary>
+    <p>You sign in with a <b>GitHub token</b> (a long password made for this). You paste it once per browser; it is kept there until you sign out.</p>
+    <ol>
+      <li>Sign in to GitHub with an account that is a member of <b>ciaVENDAVAL</b>.</li>
+      <li>Open <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">New fine-grained token</a>.</li>
+      <li><b>Token name:</b> <code>La Senyal admin</code>. <b>Expiration:</b> up to one year.</li>
+      <li><b>Resource owner:</b> <code>ciaVENDAVAL</code>.</li>
+      <li><b>Repository access:</b> <i>Only select repositories</i> → <code>lasenyal-web</code> and <code>lasenyal-docs</code>.</li>
+      <li><b>Permissions → Repository permissions → Contents:</b> <i>Read and write</i>.</li>
+      <li><b>Generate token</b>, copy it, open <i>Website</i> or <i>PDFs</i> above, choose <b>Sign In Using Access Token</b> and paste it. One token works for both.</li>
+    </ol>
+    <p>If ciaVENDAVAL doesn't allow fine-grained tokens, use a <a href="https://github.com/settings/tokens/new?scopes=public_repo&amp;description=La%20Senyal%20admin" target="_blank" rel="noopener">classic token</a> with only <code>public_repo</code> ticked.</p>
+    <p>Keep the token private, like a password. If it leaks, delete it on GitHub (Settings → Developer settings) and make a new one.</p>
+  </details>
+
+  <details>
+    <summary>How it works</summary>
+    <ul>
+      <li>Each <b>Save</b> goes straight to the live site. It shows up after about <b>1–2 minutes</b> (reload the page).</li>
+      <li>Every change is kept in GitHub's history, so anything can be undone.</li>
+      <li><b>Photos:</b> upload them as they are. Huge phone photos are shrunk, the small version for the photo strip is made automatically, and member photos are cropped square. This takes a minute more.</li>
+      <li><b>Replace a photo</b> without changing any text: <i>Assets</i> (picture icon, top left) → choose the photo → ⋮ → <i>Replace</i>, or upload one with the same name.</li>
+      <li><b>New page:</b> <i>Pages</i> → <i>New</i>, fill in the three languages, save. Then add it in <i>Menu</i> to link it.</li>
+      <li>On a phone it works too: the menu is behind ☰.</li>
+    </ul>
+  </details>
+
+  <p class="foot">Made with <a href="https://sveltiacms.app" target="_blank" rel="noopener">Sveltia CMS</a> · repo ciaVENDAVAL/lasenyal-admin</p>
+</main>
+</body>
+</html>
