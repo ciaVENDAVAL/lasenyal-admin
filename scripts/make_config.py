@@ -127,6 +127,7 @@ cfg = {
         {"name": "email", "label": "Email", "widget": "string"},
         {"name": "phones", "label": "Phones", "widget": "list"},
         {"name": "instagram", "label": "Instagram link", "widget": "string"},
+        {"name": "peertube", "label": "PeerTube channel link", "widget": "string", "required": False, "hint": "The band's channel page, e.g. https://…/c/lasenyal. Shown in the footer when filled in."},
         {"name": "video", "label": "Video link (PeerTube or YouTube)", "widget": "string", "hint": "Plays on the home page. Paste the normal link of the video: PeerTube (https://…/w/…) or YouTube (https://www.youtube.com/watch?v=…)."}]},
      {"name": "footer_text", "label": "Footer line", "widget": "string", "hint": "The year is added at the end automatically."},
      {"name": "images", "label": "Main photos", "widget": "object", "fields": [

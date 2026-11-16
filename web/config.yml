@@ -100,6 +100,11 @@ singletons:
     - name: instagram
       label: Instagram link
       widget: string
+    - name: peertube
+      label: PeerTube channel link
+      widget: string
+      required: false
+      hint: The band's channel page, e.g. https://…/c/lasenyal. Shown in the footer when filled in.
     - name: video
       label: Video link (PeerTube or YouTube)
       widget: string
