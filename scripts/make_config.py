@@ -127,7 +127,7 @@ cfg = {
         {"name": "email", "label": "Email", "widget": "string"},
         {"name": "phones", "label": "Phones", "widget": "list"},
         {"name": "instagram", "label": "Instagram link", "widget": "string"},
-        {"name": "video", "label": "YouTube video link", "widget": "string", "hint": "Shown on the home page. A normal link like https://www.youtube.com/watch?v=…"}]},
+        {"name": "video", "label": "Video link (PeerTube or YouTube)", "widget": "string", "hint": "Plays on the home page. Paste the normal link of the video: PeerTube (https://…/w/…) or YouTube (https://www.youtube.com/watch?v=…)."}]},
      {"name": "footer_text", "label": "Footer line", "widget": "string", "hint": "The year is added at the end automatically."},
      {"name": "images", "label": "Main photos", "widget": "object", "fields": [
         img("hero", "Home · big top photo (wide screens)", hint="Landscape photo."),

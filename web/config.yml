@@ -101,9 +101,9 @@ singletons:
       label: Instagram link
       widget: string
     - name: video
-      label: YouTube video link
+      label: Video link (PeerTube or YouTube)
       widget: string
-      hint: Shown on the home page. A normal link like https://www.youtube.com/watch?v=…
+      hint: 'Plays on the home page. Paste the normal link of the video: PeerTube (https://…/w/…) or YouTube (https://www.youtube.com/watch?v=…).'
   - name: footer_text
     label: Footer line
     widget: string
