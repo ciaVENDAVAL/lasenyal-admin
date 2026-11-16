@@ -8,6 +8,7 @@ Admin for **La Senyal**: edit the website and swap PDFs from the browser. No cod
 |---|---|---|
 | `/` | — | Start page and sign-in help |
 | lasenyal-web `…/#edit` | `lasenyal-web` | **Edit on the page**: tap texts, photos, PDF links on the real site; Publish = one commit (code: lasenyal-web `assets/js/edit.js`) |
+| `HANDOFF.md` | — | How to set the same tools up on another site |
 | `/web/` | `lasenyal-web` | Texts (CA·ES·EN), concerts, members, photo strip, extra pages, menu, contact/footer, main photos, colours and font, **PDFs** (`pdf/` + `_data/downloads.yml` → short links `/dossier/<lang>/`) |
 
 [Sveltia CMS](https://sveltiacms.app) (free, open source, loaded from a CDN). Every save is a commit on `main` of
