@@ -145,9 +145,9 @@ cfg = {
      {"name": "headings", "label": "Titles", "widget": "color", "default": "#ffffff"},
      {"name": "accent", "label": "Accent (links, pink)", "widget": "color", "default": "#e675b5"},
      {"name": "box", "label": "Upcoming-concerts box (green)", "widget": "color", "default": "#0a733b"},
-     {"name": "body_font", "label": "Text font", "widget": "select", "default": "Questrial",
-      "options": ["Questrial", "Inter", "Work Sans", "DM Sans", "Space Grotesk", "IBM Plex Sans"],
-      "hint": "Titles keep the wide ARCHIVO font. The accessibility button's 'easier font' still works."}]},
+     {"name": "body_font", "label": "Text font", "widget": "select", "default": "Satoshi",
+      "options": ["Satoshi", "Switzer", "General Sans", "Inter"],
+      "hint": "All served from the site itself (no Google). Titles stay in the wide UNBOUNDED font. The accessibility button's 'easier font' still works."}]},
  ],
  "collections": [
    {"name": "texts", "label": "Texts (CA · ES · EN)", "icon": "translate", "i18n": True,

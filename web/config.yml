@@ -223,15 +223,13 @@ singletons:
   - name: body_font
     label: Text font
     widget: select
-    default: Questrial
+    default: Satoshi
     options:
-    - Questrial
+    - Satoshi
+    - Switzer
+    - General Sans
     - Inter
-    - Work Sans
-    - DM Sans
-    - Space Grotesk
-    - IBM Plex Sans
-    hint: Titles keep the wide ARCHIVO font. The accessibility button's 'easier font' still works.
+    hint: All served from the site itself (no Google). Titles stay in the wide UNBOUNDED font. The accessibility button's 'easier font' still works.
     dropdown_threshold: 12
 collections:
 - name: texts

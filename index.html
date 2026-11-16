@@ -6,14 +6,17 @@
   <meta name="robots" content="noindex">
   <title>La Senyal · admin</title>
   <link rel="icon" href="favicon.png">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@125,900&family=Fragment+Mono&family=Questrial&display=swap">
   <style>
+    @font-face { font-family:"Unbounded"; src:url("fonts/Unbounded.woff2") format("woff2"); font-weight:200 900; font-display:swap; }
+    @font-face { font-family:"Satoshi"; src:url("fonts/Satoshi-Regular.woff2") format("woff2"); font-weight:400; font-display:swap; }
+    @font-face { font-family:"Satoshi"; src:url("fonts/Satoshi-Bold.woff2") format("woff2"); font-weight:700; font-display:swap; }
+    @font-face { font-family:"Fragment Mono"; src:url("fonts/FragmentMono-Regular.woff2") format("woff2"); font-weight:400; font-display:swap; }
     :root { --bg:#0c0404; --card:#171211; --ink:#fff; --text:rgb(240 237 235/.82); --muted:rgb(240 237 235/.55); --line:rgb(240 237 235/.14); --pink:#e675b5; }
     * { box-sizing: border-box; }
-    body { margin:0; background:var(--bg); color:var(--text); font:400 1.05rem/1.55 "Questrial",system-ui,sans-serif; padding:clamp(1.25rem,5vw,4rem); }
+    body { margin:0; background:var(--bg); color:var(--text); font:400 1.05rem/1.55 "Satoshi",system-ui,sans-serif; padding:clamp(1.25rem,5vw,4rem); }
     main { max-width:56rem; margin:0 auto; }
     .label { font:.78rem "Fragment Mono",monospace; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); margin:0 0 .8rem; }
-    h1 { font:900 clamp(2.4rem,9vw,5rem)/.92 "Archivo",sans-serif; font-stretch:125%; text-transform:uppercase; letter-spacing:-.02em; color:var(--ink); margin:0 0 2.5rem; display:flex; align-items:center; gap:1rem; }
+    h1 { font:900 clamp(2.2rem,8vw,4.4rem)/.92 "Unbounded",sans-serif; text-transform:uppercase; letter-spacing:-.02em; color:var(--ink); margin:0 0 2.5rem; display:flex; align-items:center; gap:1rem; }
     h1 img { width:clamp(48px,9vw,84px); height:auto; }
     h2 { color:var(--ink); font-weight:400; font-size:1.35rem; margin:0 0 .4rem; }
     .cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(15rem,1fr)); gap:1rem; margin-bottom:3rem; }
